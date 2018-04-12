@@ -3,12 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <android.support.v7.widget.AppCompatEditText
+    <android.support.design.widget.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:id="@+id/username_TextField"
-        android:layout_margin="16dp"
-        android:hint="@string/username"
-        android:inputType="text"/>
+        android:id="@+id/username_TextInputLayout"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="8dp">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/username_TextField"
+            android:hint="@string/username"
+            android:inputType="text"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/password_TextInputLayout"
+        android:layout_below="@id/username_TextInputLayout"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="8dp">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/password_TextField"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </android.support.design.widget.TextInputLayout>
 
 </RelativeLayout>
