@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     AppCompatEditText pass;
     RelativeLayout relativeLayout;
     TextInputLayout userLayout;
+    TextInputLayout passLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
         userLayout = (TextInputLayout) findViewById(R.id.username_TextInputLayout);
+        passLayout = (TextInputLayout) findViewById(R.id.password_TextInputLayout);
 
         relativeLayout.setOnClickListener(null);
 
@@ -53,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 validateUser();
             }
         });
+
+        passLayout.setCounterEnabled(true);
+        passLayout.setCounterMaxLength(8);
+
+
 
     }
 
