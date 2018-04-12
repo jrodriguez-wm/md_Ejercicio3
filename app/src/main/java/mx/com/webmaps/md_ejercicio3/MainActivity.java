@@ -6,11 +6,14 @@ import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     AppCompatEditText user;
     AppCompatEditText pass;
+
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         user = (AppCompatEditText) findViewById(R.id.username_TextField);
         pass = (AppCompatEditText) findViewById(R.id.password_TextField);
+
+        relativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
+
+        relativeLayout.setOnClickListener(null);
 
         /*user.addTextChangedListener(new TextWatcher() {
             @Override
@@ -36,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        */
+
 
         user.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -44,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(hasFocus);
             }
         });
+        */
 
     }
 }
